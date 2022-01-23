@@ -1,14 +1,21 @@
 <template>
-  <b-container>
-    <b-form @submit.prevent>
-      <b-form-group id="email" label="Email:" label-for="email-input" placeholder="Email" required>
-        <b-form-input id="email-input" v-model="email"></b-form-input>
-      </b-form-group>
-      <b-form-group id="password" label="Password:" label-for="password-input" placeholder="Password" required>
-        <b-form-input type="password" id="password-input" v-model="password"></b-form-input>
-      </b-form-group>
-      <b-button variant="primary" @click="performLogin" type="submit">Login</b-button>
-    </b-form>
+  <b-container class="mt-5">
+    <b-row>
+      <b-col cols="12">
+        <h1>Welcome to Interlink! Please log in.</h1>
+      </b-col>
+      <b-col cols="12">
+        <b-form @submit.prevent="performLogin" type="w-100">
+          <b-form-group id="email" label="Email:" label-for="email-input">
+            <b-form-input id="email-input" v-model="email" placeholder="Email" required></b-form-input>
+          </b-form-group>
+          <b-form-group id="password" label="Password:" label-for="password-input">
+            <b-form-input type="password" id="password-input" v-model="password" placeholder="Password" required></b-form-input>
+          </b-form-group>
+          <b-button variant="primary" type="submit">Login</b-button>
+        </b-form>
+      </b-col>
+    </b-row>
   </b-container>
 </template>
 
