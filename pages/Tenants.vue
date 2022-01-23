@@ -1,5 +1,8 @@
 <template>
   <b-container class="mt-5">
+    <b-row>
+      <Navbar/>
+    </b-row>
     <b-row class="justify-content-center">
       <b-col cols="12"><h1>Login Successful.</h1></b-col>
       <b-col cols="12">

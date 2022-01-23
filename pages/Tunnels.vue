@@ -1,9 +1,16 @@
 <template>
 <b-container class="mt-5">
-<h1>Tunnels</h1>
-  <b-button v-b-modal="'add-tun-modal'">Add Tunnel</b-button>
-  <b-table striped hover :items="tunnels">
-  </b-table>
+  <b-row>
+    <Navbar/>
+  </b-row>
+  <b-row>
+    <b-col cols="12">
+      <h1>Tunnels</h1>
+      <b-button v-b-modal="'add-tun-modal'">Add Tunnel</b-button>
+      <b-table striped hover :items="tunnels">
+      </b-table>
+    </b-col>
+  </b-row>
   <b-modal id="add-tun-modal" title="Add Tunnel" >
     <b-form>
       <p>Name</p>
