@@ -34,7 +34,7 @@ export default {
       }).then((response) => {
         this.$store.commit('app/setToken', response.data.data.token);
         this.$router.push({
-          name: "Home"
+          name: "Tenants"
         })
       })
     }
