@@ -1,8 +1,9 @@
 <template>
-<div>
+<b-container class="mt-5">
 <h1>Tunnels</h1>
   <b-button v-b-modal="'add-tun-modal'">Add Tunnel</b-button>
-  <b-table striped hover :items="tunnels"></b-table>
+  <b-table striped hover :items="tunnels">
+  </b-table>
   <b-modal id="add-tun-modal" title="Add Tunnel" >
     <b-form>
       <p>Name</p>
@@ -18,7 +19,7 @@
       <b-button @click="addTunnel">Add Tunnel</b-button>
     </b-form>
   </b-modal>
-</div>
+</b-container>
 </template>
 
 <script>
@@ -90,6 +91,7 @@ export default {
   },
   async mounted() {
     await this.getHosts()
+    await this.getTunnels()
   }
 }
 </script>
